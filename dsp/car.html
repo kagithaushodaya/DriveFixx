@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DriveFix - Car Search</title>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color:black;">Car Search</h2>
+        <input type="text" id="car-model" placeholder="Enter Car Model (e.g. Benz)" required>
+        <input type="text" id="car-part" placeholder="Enter Part to Purchase(e.g. Battery)" required>
+        <input type="text" id="car-location" placeholder="Enter Location or Current Location" required>
+        <button id="car-search-button">Search Shops</button>
+        <p><button onclick="setCurrentLocation()" style="color: green;">Use Current Location</button></p>
+        <div id="car-shop-list"></div>
+    </div>
+
+    <script src="car.js"></script>
+</body>
+</html>
+
+
+
