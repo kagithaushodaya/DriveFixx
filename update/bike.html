@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Search for Bike Parts</title>
+    <style>
+        .suggestions {
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .suggestion-item {
+            padding: 8px;
+            cursor: pointer;
+        }
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: black;">Search for Bike Parts</h1>
+        <input type="text" id="bike-model" placeholder="Enter bike model (e.g., Yamaha)" required>
+        <input type="text" id="bike-part" placeholder="Enter part name (e.g., Chain)" required oninput="showBikeSuggestions()">
+        <div id="bike-suggestions-container" class="suggestions"></div>
+        <input type="text" id="bike-location" placeholder="Enter your location">
+        <button id="bike-search-button" style="background-color: black;">Search Bike Shops</button>
+        <p><button onclick="setCurrentBikeLocation()" style="color: green;">Use Current Location</button></p>
+        <div id="bike-shop-list"></div>
+    </div>
+
+    <script src="bike.js"></script>
+</body>
+</html>

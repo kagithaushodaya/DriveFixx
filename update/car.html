@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Search for Car Parts</title>
+    <style>
+        .suggestions {
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .suggestion-item {
+            padding: 8px;
+            cursor: pointer;
+        }
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: black;">Search for Car Parts</h1>
+        <input type="text" id="car-model" placeholder="Enter car model (e.g., Benz)" required>
+        <input type="text" id="car-part" placeholder="Enter part name (e.g., Battery)" required oninput="showSuggestions()">
+        <div id="suggestions-container" class="suggestions"></div>
+        <input type="text" id="car-location" placeholder="Enter your location">
+        <button id="car-search-button" style="background-color: black;">Search Car Shops</button>
+        <p><button onclick="setCurrentLocation()" style="color: green;">Use Current Location</button></p>
+        <div id="car-shop-list"></div>
+    </div>
+
+    <script src="car.js"></script>
+</body>
+</html>

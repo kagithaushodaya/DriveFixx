@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shop Details</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Shop Details</h1>
+        <div id="shop-details"></div>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+    <script>
+        // Function to retrieve and display shop details
+        function displayShopDetails() {
+            const name = localStorage.getItem('shopName');
+            const contact = localStorage.getItem('shopContact');
+            const distance = localStorage.getItem('shopDistance');
+            const rating = localStorage.getItem('shopRating');
+            const hours = localStorage.getItem('shopHours');
+
+            const shopDetailsDiv = document.getElementById('shop-details');
+
+            if (name) {
+                shopDetailsDiv.innerHTML = `
+                    <h2>${name}</h2>
+                    <p>Contact: ${contact}</p>
+                    <p>Distance: ${distance}</p>
+                    <p>Rating: ${rating} ⭐</p>
+                    <p>Hours: ${hours}</p>
+                `;
+            } else {
+                shopDetailsDiv.innerHTML = `<p>No shop details found.</p>`;
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        // Call the function to display shop details
+        displayShopDetails();
+    </script>
+</body>
+</html>

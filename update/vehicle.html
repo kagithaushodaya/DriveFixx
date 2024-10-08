@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Select Vehicle</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: black;">Hi! <span id="username-display"></span></h1>
+        <h2 style="color: black;">Select Your Vehicle Type</h2>
+        <button id="bike-button" style="background-color: red;">Bike</button>
+        <button id="car-button" style="background-color: navy;">Car</button>
+    </div>
+
+    <script>
+        // Display the username
+        document.getElementById('username-display').innerText = localStorage.getItem('username');
+
+        document.getElementById('bike-button').addEventListener('click', function() {
+            window.location.href = 'bike.html'; // Navigate to bike search page
+        });
+
+        document.getElementById('car-button').addEventListener('click', function() {
+            window.location.href = 'car.html'; // Navigate to car search page
+        });
+    </script>
+</body>
+</html>
